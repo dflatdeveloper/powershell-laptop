@@ -83,21 +83,6 @@ $lowercomputername = ($env:COMPUTERNAME).ToLower()
 
 $credential = Get-Local-Credential -username $lowercomputername
 
-#system drives
 
-Add-Network-Disk -servername $serverhost -foldername "File History" -driveLetter "f" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Backup Data" -driveLetter "k" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "profiles\netlogon" -driveLetter "n" -credential $credential
-Add-Network-Disk -servername $serverhost -foldername "3rd Party Apps" -driveLetter "t" -credential $credential
-
-
-#user drives
-
-Add-Network-Disk -servername $serverhost -foldername "games" -driveLetter "g" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "profiles\$lowercomputername" -driveLetter "h" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Images" -driveLetter "i" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Music" -driveLetter "m" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Documents" -driveLetter "o" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Printable" -driveLetter "p" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "code" -driveLetter "s" -credential $credential 
-Add-Network-Disk -servername $serverhost -foldername "Videos" -driveLetter "v" -credential $credential 
+Add-Network-Disk -servername $serverhost -foldername "<share name>" -driveLetter "d" -credential $credential 
+#Add-Network-Disk -servername $serverhost -foldername "<share name 2>" -driveLetter "e" -credential $credential 
